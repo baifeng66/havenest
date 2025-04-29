@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.only4play.havenest.framework.mapper.CategoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.only4play.havenest.framework.domain.po.Category">
+            <id property="id" column="id" />
+            <result property="parentId" column="parent_id" />
+            <result property="categoryName" column="category_name" />
+            <result property="createTime" column="create_time" />
+            <result property="updateTime" column="update_time" />
+            <result property="isDelete" column="is_delete" />
+            <result property="status" column="status" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,parent_id,category_name,create_time,update_time,is_delete,
+        status
+    </sql>
+</mapper>

@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Date;
 
 /**
@@ -93,4 +94,19 @@ public class Article implements Serializable {
      */
     @TableField(value = "update_time")
     private Date updateTime;
+
+    /**
+     * 浏览量
+     */
+    @TableField(value = "view_count")
+    private BigInteger viewCount;
+
+    /**
+     * 是否允许评论(0否 1是)
+     */
+    @TableField(value = "is_comment")
+    private Integer isComment;
+
+    @TableField(exist = false)
+    private String categoryName;
 }
